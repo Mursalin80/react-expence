@@ -6,9 +6,12 @@ import { Link } from "react-router-dom";
 export const ExpenListItems = ({ createdAt, note, amount, dispatch, id }) => {
   return (
     <div className="ui segment">
-      <Link to={`/edit/${id}`}>
-        <h2>{note}</h2>
-      </Link>
+      {
+        <Link to={`/edit/${id}`}>
+          <h2>{note}</h2>
+        </Link>
+      }
+
       <p>
         createdAt : {createdAt} and amount: {amount}{" "}
       </p>

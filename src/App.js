@@ -9,20 +9,20 @@ import EditExpence from "./components/EditExpence";
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="ui container">
-        <Header />
-        <header className="">
-          <Switch>
-            <Route path="/" component={ExpenDashBord} exact={true} />
-            <Route path="/create" component={AddExpence} />
-            <Route path="/edit/:id" component={EditExpence} />
-
-            {/* <Route component={NotFoundPage} /> */}
-          </Switch>
-        </header>
-      </div>
-    </BrowserRouter>
+    <div className="ui container">
+      {
+        <BrowserRouter>
+          <Header />
+          <header className="">
+            <Switch>
+              <Route path="/" component={ExpenDashBord} exact={true} />
+              <Route path="/create" component={AddExpence} />
+              <Route path="/edit/:id" component={EditExpence} />
+            </Switch>
+          </header>
+        </BrowserRouter>
+      }
+    </div>
   );
 }
 

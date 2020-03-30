@@ -1,0 +1,197 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render expence form 1`] = `
+<div
+  className="ui container"
+>
+  <form
+    className="ui form"
+    onSubmit={[Function]}
+  >
+    <input
+      className="field"
+      name="note"
+      onChange={[Function]}
+      placeholder="note"
+      type="text"
+      value=""
+    />
+    <input
+      className="field"
+      name="amount"
+      onChange={[Function]}
+      placeholder="amount"
+      type="text"
+      value={0}
+    />
+    <input
+      className="field"
+      name="description"
+      onChange={[Function]}
+      placeholder="description"
+      type="text"
+      value=""
+    />
+    <input
+      className="field"
+      name="createdAt"
+      onChange={[Function]}
+      placeholder="createdAt"
+      type="text"
+      value={0}
+    />
+    <button
+      className="ui button"
+    >
+      Add Expence
+    </button>
+  </form>
+</div>
+`;
+
+exports[`should render expence form with data 1`] = `
+<div
+  className="ui container"
+>
+  <form
+    className="ui form"
+    onSubmit={[Function]}
+  >
+    <input
+      className="field"
+      name="note"
+      onChange={[Function]}
+      placeholder="note"
+      type="text"
+      value="Milk bill"
+    />
+    <input
+      className="field"
+      name="amount"
+      onChange={[Function]}
+      placeholder="amount"
+      type="text"
+      value={5600}
+    />
+    <input
+      className="field"
+      name="description"
+      onChange={[Function]}
+      placeholder="description"
+      type="text"
+      value="Milk bill for month of Jan 2020"
+    />
+    <input
+      className="field"
+      name="createdAt"
+      onChange={[Function]}
+      placeholder="createdAt"
+      type="text"
+      value={5300}
+    />
+    <button
+      className="ui button"
+    >
+      Add Expence
+    </button>
+  </form>
+</div>
+`;
+
+exports[`simulate from summition 1`] = `
+<div
+  className="ui container"
+>
+  <form
+    className="ui form"
+    onSubmit={[Function]}
+  >
+    <input
+      className="field"
+      name="note"
+      onChange={[Function]}
+      placeholder="note"
+      type="text"
+      value=""
+    />
+    <input
+      className="field"
+      name="amount"
+      onChange={[Function]}
+      placeholder="amount"
+      type="text"
+      value={0}
+    />
+    <input
+      className="field"
+      name="description"
+      onChange={[Function]}
+      placeholder="description"
+      type="text"
+      value=""
+    />
+    <input
+      className="field"
+      name="createdAt"
+      onChange={[Function]}
+      placeholder="createdAt"
+      type="text"
+      value={0}
+    />
+    <button
+      className="ui button"
+    >
+      Add Expence
+    </button>
+  </form>
+</div>
+`;
+
+exports[`simulate input note change 1`] = `
+<div
+  className="ui container"
+>
+  <form
+    className="ui form"
+    onSubmit={[Function]}
+  >
+    <input
+      className="field"
+      name="note"
+      onChange={[Function]}
+      placeholder="note"
+      type="text"
+      value="new note"
+    />
+    <input
+      className="field"
+      name="amount"
+      onChange={[Function]}
+      placeholder="amount"
+      type="text"
+      value={0}
+    />
+    <input
+      className="field"
+      name="description"
+      onChange={[Function]}
+      placeholder="description"
+      type="text"
+      value=""
+    />
+    <input
+      className="field"
+      name="createdAt"
+      onChange={[Function]}
+      placeholder="createdAt"
+      type="text"
+      value={0}
+    />
+    <button
+      className="ui button"
+    >
+      Add Expence
+    </button>
+  </form>
+</div>
+`;

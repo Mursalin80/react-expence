@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should  1`] = `
+<div
+  className="ui menu"
+>
+  <header
+    className="header item"
+  >
+    <h1>
+      Expensify
+    </h1>
+    <Router>
+      <Link
+        activeClassName="is-active"
+        className="item"
+        exact={true}
+        to="/"
+      >
+        <div
+          className="ui pramiry primary button"
+        >
+          Dashboard
+        </div>
+      </Link>
+      <Link
+        activeClassName="is-active"
+        className="item"
+        to="/create"
+      >
+        <div
+          className="ui button"
+        >
+          Create Expense
+        </div>
+      </Link>
+    </Router>
+  </header>
+</div>
+`;

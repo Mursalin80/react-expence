@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render expence list item  1`] = `
+<div
+  className="ui segment"
+>
+  <Link
+    to="/edit/1"
+  >
+    <h2>
+      gas bill
+    </h2>
+  </Link>
+  <p>
+    createdAt : 
+    2000
+     and amount: 
+    250
+     
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Remove
+  </button>
+</div>
+`;

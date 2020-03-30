@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render add expence 1`] = `
+<div>
+  <ExpanceForm
+    expence={
+      Object {
+        "amount": 1000,
+        "createdAt": 3600,
+        "description": "net bill for month of Jan 2020",
+        "id": 2,
+        "note": "net bill",
+      }
+    }
+    onSubmit={[Function]}
+  />
+</div>
+`;

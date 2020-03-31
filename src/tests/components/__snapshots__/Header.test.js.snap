@@ -10,7 +10,7 @@ exports[`should  1`] = `
     <h1>
       Expensify
     </h1>
-    <Router>
+    <BrowserRouter>
       <Link
         activeClassName="is-active"
         className="item"
@@ -34,7 +34,7 @@ exports[`should  1`] = `
           Create Expense
         </div>
       </Link>
-    </Router>
+    </BrowserRouter>
   </header>
 </div>
 `;

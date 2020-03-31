@@ -12,6 +12,8 @@ export const expenReducer = (state = initState, action) => {
       return [...state, action.expence];
     case "Remove_exp":
       return state.filter(({ id }) => id !== action.id);
+    case "SET_exp":
+      return action.expances;
     case "Edit_exp":
       return state.map(exp => {
         if (exp.id === action.id) {

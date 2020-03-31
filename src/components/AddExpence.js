@@ -1,15 +1,15 @@
 import React from "react";
 import ExpanceForm from "./ExpanceForm";
 import { connect } from "react-redux";
-import { addExpance } from "../redux/action";
+import { startAddExpence } from "../redux/action";
 
-export const AddExpence = ({ onSubmit }) => {
+export const AddExpence = ({ submit }) => {
   return (
     <div>
       <h1>Add Expence</h1>
       <ExpanceForm
         onSubmit={expence => {
-          onSubmit(expence);
+          submit(expence);
         }}
       />
     </div>
@@ -18,7 +18,7 @@ export const AddExpence = ({ onSubmit }) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onSubmit: expence => dispatch(addExpance(expence))
+    submit: expence => dispatch(startAddExpence(expence))
   };
 };
 

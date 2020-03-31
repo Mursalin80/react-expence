@@ -1,6 +1,18 @@
-import { removeExpance, editExpance, addExpance } from "../redux/action";
-import { noteFilter, sortByAmount, sortByDate } from "../redux/action";
-// remove expevce action
+import configMockStore from "redux-mock-store";
+import thunk from "redux-thunk";
+import {
+  removeExpance,
+  editExpance,
+  startAddExpence,
+  addExpance,
+  sortByAmount,
+  sortByDate,
+  noteFilter,
+  startSetExpances
+} from "../redux/action";
+
+const createMockStore = configMockStore([thunk]);
+
 test("Tesing Action generator remove expence", () => {
   let rem = removeExpance({ id: 1230 });
   expect(rem).toEqual({ type: "Remove_exp", id: 1230 });
@@ -27,22 +39,16 @@ test("Adding Expence Action generator", () => {
   let exp = addExpance(expData);
   expect(exp).toEqual({
     type: "Add_exp",
-    expence: { ...expData, id: expect.any(String), desc: "" }
+    expence: { ...expData }
   });
 });
 
 // // add expence action with no data
 test("Adding Expence Action generator", () => {
-  let exp = addExpance();
+  let exp = addExpance({});
   expect(exp).toEqual({
     type: "Add_exp",
-    expence: {
-      note: "",
-      amount: 0,
-      desc: "",
-      createdAt: 0,
-      id: expect.any(String)
-    }
+    expence: {}
   });
 });
 
@@ -69,4 +75,37 @@ test("sortByDate action filter", () => {
   expect(sByDate).toEqual({
     type: "Sort_by_Date"
   });
+});
+
+// test("should startAddExpence", done => {
+//   const store = createMockStore({});
+//   let exp = {
+//     note: "new",
+//     amount: 250,
+//     createdAt: 6000,
+//     description: "feb2020"
+//   };
+//   store.dispatch(startAddExpence(exp)).then(() => {
+//     let action = store.getActions();
+//     expect(action[0]).toEqual({
+//       type: "Add_exp",
+//       expence: {
+//         id: expect.any(String),
+//         ...exp
+//       }
+//     });
+//     done();
+//   });
+// });
+
+test("should start set expences from firebase", done => {
+  const store = createMockStore({});
+  store.dispatch(startSetExpances()).then(() => {
+    let action = store.getActions();
+    expect(action).toEqual({
+      type: "SET_exp",
+      expences
+    });
+  });
+  done();
 });

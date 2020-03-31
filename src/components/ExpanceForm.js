@@ -9,7 +9,8 @@ export default class ExpanceForm extends Component {
       createdAt: props.expence ? props.expence.createdAt : 0,
       description: props.expence ? props.expence.description : "",
       amount: props.expence ? props.expence.amount : 0,
-      error: ""
+      error: "",
+      edit: props.expence ? true : false
     };
   }
 
@@ -69,7 +70,9 @@ export default class ExpanceForm extends Component {
             onChange={this.onChangeHandler}
           />
 
-          <button className="ui button">Add Expence</button>
+          <button className="ui button">
+            {this.state.edit ? "Edit Expance" : "Add Expence"}
+          </button>
         </form>
       </div>
     );

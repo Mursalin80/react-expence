@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import App, { history } from "./App";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
-import { startSetExpances } from "./redux/action";
+import { startSetExpances, logout, login } from "./redux/action";
+import { firebase } from "./firebase/firebase";
 
 const jsx = (
   <Provider store={store}>
@@ -12,7 +13,7 @@ const jsx = (
 );
 
 ReactDOM.render(
-  <div className="ui container">
+  <div className="">
     <div className="ui segment">
       <div className="ui active dimmer">
         <div className="ui text loader">Loading</div>
@@ -23,11 +24,33 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-store.dispatch(startSetExpances()).then(() => {
-  ReactDOM.render(
-    <React.StrictMode>{jsx}</React.StrictMode>,
-    document.getElementById("root")
-  );
+let hasRender = false;
+
+const renderApp = () => {
+  if (!hasRender) {
+    ReactDOM.render(
+      <React.StrictMode>{jsx}</React.StrictMode>,
+      document.getElementById("root")
+    );
+    hasRender = true;
+  }
+};
+
+firebase.auth().onAuthStateChanged(user => {
+  if (user) {
+    console.log(user.providerData[0]);
+    store.dispatch(login(user.providerData[0]));
+    store.dispatch(startSetExpances()).then(() => {
+      renderApp();
+    });
+    if (history.location.pathname === "/") {
+      history.push("/dashboard");
+    }
+  } else {
+    store.dispatch(logout());
+    renderApp();
+    history.push("/");
+  }
 });
 
 // If you want your app to work offline and load faster, you can change

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export const ExpenListItems = ({ createdAt, note, amount, dispatch, id }) => {
   return (
     <div className="ui segment">
-      <a className="ui teal right ribbon label">Expance</a>
+      <i className="ui teal right ribbon label">Expance</i>
       {
         <Link to={`/edit/${id}`}>
           <h2>{note}</h2>

@@ -124,3 +124,13 @@ export const startSetExpances = () => {
       });
   };
 };
+
+export const login =(user)=>{
+  return {
+    type:'LOGIN',
+    user
+  }
+}
+
+
+export const logout = ()=>({type:'LOGOUT'})

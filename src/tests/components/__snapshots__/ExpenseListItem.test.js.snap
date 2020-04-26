@@ -4,6 +4,11 @@ exports[`should render expence list item  1`] = `
 <div
   className="ui segment"
 >
+  <i
+    className="ui teal right ribbon label"
+  >
+    Expance
+  </i>
   <Link
     to="/edit/1"
   >
@@ -12,16 +17,24 @@ exports[`should render expence list item  1`] = `
     </h2>
   </Link>
   <p>
-    createdAt : 
+    <i
+      className="calendar alternate outline icon"
+    />
+    createdAt :
     2000
-     and amount: 
-    250
-     
   </p>
+  <h3>
+    <i
+      className="money bill alternate outline icon"
+    />
+     amount:
+    250
+  </h3>
   <button
+    className="ui button"
     onClick={[Function]}
   >
-    Remove
+    Discard
   </button>
 </div>
 `;

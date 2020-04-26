@@ -5,7 +5,6 @@ exports[`should render ExpenDashBord page 1`] = `
   <h1>
     Dash Bord
   </h1>
-  <Connect(AddExpence) />
   <Connect(ExpenListFilter) />
   <Connect(ExpenList) />
 </div>

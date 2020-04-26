@@ -1,26 +1,27 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import "./firebase/firebase";
-
+import { Router, Route, Switch } from "react-router-dom";
+// import "./firebase/firebase";
+import { createBrowserHistory } from "history";
 import ExpenDashBord from "./components/ExpenDashBord";
-import Header from "./components/Header";
 import AddExpence from "./components/AddExpence";
 import EditExpence from "./components/EditExpence";
+import Login from "./components/Login";
+import PrivateRoute from "./components/PrivateRoute";
 
+export const history = createBrowserHistory();
 function App() {
   return (
-    <div className="ui container">
+    <div className="">
       {
-        <BrowserRouter>
-          <Header />
-          <header className="">
-            <Switch>
-              <Route path="/" component={ExpenDashBord} exact={true} />
-              <Route path="/create" component={AddExpence} exact={true} />
-              <Route path="/edit/:id" component={EditExpence} />
-            </Switch>
-          </header>
-        </BrowserRouter>
+        <Router history={history}>
+          <Switch>
+            <Route path="/" component={Login} exact={true} />
+
+            <PrivateRoute path="/dashboard" component={ExpenDashBord} />
+            <PrivateRoute path="/create" component={AddExpence} />
+            <PrivateRoute path="/edit/:id" component={EditExpence} />
+          </Switch>
+        </Router>
       }
     </div>
   );

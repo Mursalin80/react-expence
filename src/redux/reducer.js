@@ -40,3 +40,17 @@ export const filterReducer = (state = initFilterState, action = {}) => {
       return state;
   }
 };
+
+export const authReducer = (state = {}, action) => {
+  switch (action.type) {
+    case "LOGIN":
+      return {
+        uid: action.user.uid,
+        user: action.user
+      };
+    case "LOGOUT":
+      return {};
+    default:
+      return state;
+  }
+};

@@ -1,7 +1,7 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
-import { expenReducer, filterReducer } from "./reducer";
+import { expenReducer, filterReducer ,authReducer} from "./reducer";
 // import { expData } from "./expenData";
 // import {
 //   addExpance,
@@ -17,7 +17,7 @@ console.log("Redux is running");
 
 // store
 export let store = createStore(
-  combineReducers({ expenReducer, filterReducer }),
+  combineReducers({ expenReducer, filterReducer ,authReducer}),
   composeWithDevTools(applyMiddleware(thunk))
 );
 

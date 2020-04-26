@@ -1,5 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Header snapshot 1`] = `
+<div
+  className="ui menu"
+>
+  <header
+    className="header item"
+  >
+    <h1>
+      Expensify
+    </h1>
+    <Link
+      className="item"
+      to="/dashboard"
+    >
+      <div
+        className="ui pramiry primary button"
+      >
+        Dashboard
+      </div>
+    </Link>
+    <Link
+      activeClassName="is-active"
+      className="item"
+      to="/create"
+    >
+      <div
+        className="ui button"
+      >
+        Create Expense
+      </div>
+    </Link>
+    <button
+      className="ui secondary button"
+      onClick={[Function]}
+    >
+      Logout
+    </button>
+  </header>
+</div>
+`;
+
 exports[`should  1`] = `
 <div
   className="ui menu"
@@ -10,31 +51,33 @@ exports[`should  1`] = `
     <h1>
       Expensify
     </h1>
-    <BrowserRouter>
-      <Link
-        activeClassName="is-active"
-        className="item"
-        exact={true}
-        to="/"
+    <Link
+      className="item"
+      to="/dashboard"
+    >
+      <div
+        className="ui pramiry primary button"
       >
-        <div
-          className="ui pramiry primary button"
-        >
-          Dashboard
-        </div>
-      </Link>
-      <Link
-        activeClassName="is-active"
-        className="item"
-        to="/create"
+        Dashboard
+      </div>
+    </Link>
+    <Link
+      activeClassName="is-active"
+      className="item"
+      to="/create"
+    >
+      <div
+        className="ui button"
       >
-        <div
-          className="ui button"
-        >
-          Create Expense
-        </div>
-      </Link>
-    </BrowserRouter>
+        Create Expense
+      </div>
+    </Link>
+    <button
+      className="ui secondary button"
+      onClick={[Function]}
+    >
+      Logout
+    </button>
   </header>
 </div>
 `;
